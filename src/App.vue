@@ -3,5 +3,11 @@ import { HomePage } from './pages';
 </script>
 
 <template>
-  <HomePage />
+  <div class="container">
+    <HomePage />
+  </div>
 </template>
+
+<style>
+@import 'assets/styles.css';
+</style>
