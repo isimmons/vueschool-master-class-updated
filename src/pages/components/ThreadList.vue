@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { reactive, defineProps } from 'vue';
+import { RouterLink } from 'vue-router';
 import sourceData from '~/data.json';
 import { type Thread, User } from '~/@types';
 
@@ -26,7 +27,10 @@ const userById = (userId: string | undefined) => {
       >
         <div>
           <p>
-            <a href="#">{{ thread.title }}</a>
+            <RouterLink
+              :to="{ name: 'thread.show', params: { threadId: thread.id } }"
+              >{{ thread.title }}</RouterLink
+            >
           </p>
           <p class="text-faded text-xsmall">
             By <a href="#">{{ userById(thread.userId)?.name }}</a
