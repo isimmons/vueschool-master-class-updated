@@ -5,14 +5,14 @@ import { type Thread, Post, User } from '~/@types';
 export type ThreadPageProps = {
   threadId: string;
 };
-const props = defineProps<ThreadPageProps>();
+const { threadId } = defineProps<ThreadPageProps>();
 
 const threads = ref<Array<Thread>>(sourceData.threads);
 const posts = ref<Array<Post>>(sourceData.posts as Array<Post>);
 const users = ref<Array<User>>(sourceData.users);
 
 const thread = computed(() => {
-  return threads.value.find((t) => t.id === props.threadId);
+  return threads.value.find((t) => t.id === threadId);
 });
 
 const postById = (postId: string) => {
