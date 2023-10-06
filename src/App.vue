@@ -1,10 +1,8 @@
-<script setup lang="ts">
-import { HomePage } from './pages';
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="container">
-    <HomePage />
+    <RouterView />
   </div>
 </template>
 
