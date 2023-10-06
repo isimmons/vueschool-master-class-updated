@@ -52,7 +52,6 @@ export type Thread = {
 };
 
 export type ReactionEmoji = '❤️' | '👎' | '👍' | '💩' | '😄';
-// export type ReactionIds = Record<string, string>;
 
 export type Post = {
   edited?: {
