@@ -1,3 +1,4 @@
+import { redirectOnThreadNotFound } from './navigationGuards';
 import { HomePage } from '~/pages';
 import { ThreadPage } from '~/pages';
 import { NotFoundPage } from '~/pages';
@@ -9,6 +10,7 @@ const routes = [
     name: 'thread.show',
     component: ThreadPage,
     props: true,
+    beforeEnter: [redirectOnThreadNotFound],
   },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFoundPage },
 ];
