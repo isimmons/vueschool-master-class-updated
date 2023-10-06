@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import ThreadList from './components/ThreadList.vue';
-import { ref } from 'vue';
+import { reactive } from 'vue';
 import sourceData from '~/data.json';
 import { type Thread } from '~/@types';
-const threads = ref<Array<Thread>>(sourceData.threads);
+const threads = reactive<Array<Thread>>(sourceData.threads);
 </script>
 
 <template>
