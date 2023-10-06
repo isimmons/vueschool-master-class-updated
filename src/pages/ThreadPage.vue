@@ -25,12 +25,15 @@ const userById = (userId: string | undefined) => {
 </script>
 
 <template>
-  <div class="col-large push-top">
-    <h1>{{ thread?.title }}</h1>
+  <div
+    v-if="thread"
+    class="col-large push-top"
+  >
+    <h1>{{ thread.title }}</h1>
 
     <div class="post-list">
       <div
-        v-for="postId in thread?.posts"
+        v-for="postId in thread.posts"
         :key="postId"
         class="post"
       >
