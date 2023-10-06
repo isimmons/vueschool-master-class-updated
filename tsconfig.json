@@ -22,8 +22,9 @@
     "noUncheckedIndexedAccess": true,
 
     /* paths n such */
+    "baseUrl": "./",
     "paths": {
-      "~*": ["./src/*"]
+      "~/*": ["src/*"]
     },
 
     "noErrorTruncation": true
