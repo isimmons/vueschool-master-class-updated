@@ -1,5 +1,6 @@
 import { HomePage } from '~/pages';
 import { ThreadPage } from '~/pages';
+import { NotFoundPage } from '~/pages';
 
 const routes = [
   { path: '/', name: 'home', component: HomePage },
@@ -9,6 +10,7 @@ const routes = [
     component: ThreadPage,
     props: true,
   },
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFoundPage },
 ];
 
 export default routes;
