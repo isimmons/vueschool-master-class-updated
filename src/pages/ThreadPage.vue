@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, computed, defineProps } from 'vue';
+import { reactive, computed } from 'vue';
 import PostList from './components/PostList.vue';
 import sourceData from '~/data.json';
 import { type Thread, Post } from '~/@types';

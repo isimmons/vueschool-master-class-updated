@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, defineProps } from 'vue';
+import { reactive } from 'vue';
 import { RouterLink } from 'vue-router';
 import sourceData from '~/data.json';
 import { type Thread, User } from '~/@types';
