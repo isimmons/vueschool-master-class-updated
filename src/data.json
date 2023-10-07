@@ -861,7 +861,7 @@
   "stats": {
     "postsCount": 23,
     "threadsCount": 5,
-    "usersCount": 14,
+    "usersCount": 15,
     "usersOnline": 0
   },
   "threads": [
@@ -1326,6 +1326,17 @@
     }
   ],
   "users": [
+    {
+      "avatar": "https://gravatar.com/userimage/31851778/a6b09912b1e0b27fde5ea6f30385d113.jpeg?size=460",
+      "email": "isimmons33@gmail.com",
+      "lastVisitAt": 1594772078,
+      "name": "Ian Simmons",
+      "isModerator": true,
+      "registeredAt": 1594632260,
+      "username": "isimmons33",
+      "usernameLower": "isimmons33",
+      "id": "18St7Q8Zi2N1SPa5ahzssq9kbyp2"
+    },
     {
       "avatar": "https://avatars3.githubusercontent.com/u/2327556?v=4&s=460",
       "email": "chrisvfritz@gmail.com",
