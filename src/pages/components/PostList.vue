@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { reactive } from 'vue';
-import AppDate from '~/components/AppDate.vue';
 
 import sourceData from '~/data.json';
 
