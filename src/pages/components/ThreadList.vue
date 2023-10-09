@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { reactive } from 'vue';
 import { RouterLink } from 'vue-router';
+import AppDate from '~/components/AppDate.vue';
 import sourceData from '~/data.json';
 import { type Thread, User } from '~/@types';
 
@@ -34,7 +35,7 @@ const userById = (userId: string | undefined) => {
           </p>
           <p class="text-faded text-xsmall">
             By <a href="#">{{ userById(thread.userId)?.name }}</a
-            >, {{ thread.publishedAt }}.
+            >, <AppDate :timestamp="thread.publishedAt" />
           </p>
         </div>
 
@@ -51,7 +52,9 @@ const userById = (userId: string | undefined) => {
             <p class="text-xsmall">
               <a href="#">{{ userById(thread.userId)?.name }}</a>
             </p>
-            <p class="text-xsmall text-faded">{{ thread.publishedAt }}</p>
+            <p class="text-xsmall text-faded">
+              <AppDate :timestamp="thread.publishedAt" />
+            </p>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { reactive } from 'vue';
-import { timeDiffForHumans, humanFriendlyDate } from '~/helpers';
+import AppDate from '~/components/AppDate.vue';
 
 import sourceData from '~/data.json';
 
@@ -48,12 +48,10 @@ const userById = (userId: string | undefined) => {
           <p>{{ post.text }}</p>
         </div>
       </div>
-      <div
+      <AppDate
+        :timestamp="post.publishedAt"
         class="post-date text-faded"
-        :title="humanFriendlyDate(post.publishedAt)"
-      >
-        {{ timeDiffForHumans(post.publishedAt) }}
-      </div>
+      />
     </div>
   </div>
 </template>
