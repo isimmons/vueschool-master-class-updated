@@ -1,10 +1,18 @@
-import { redirectOnThreadNotFound } from './navigationGuards';
-import { HomePage } from '~/pages';
-import { ThreadPage } from '~/pages';
-import { NotFoundPage } from '~/pages';
+import {
+  redirectOnThreadNotFound,
+  redirectOnForumNotFound,
+} from './navigationGuards';
+import { HomePage, ForumPage, ThreadPage, NotFoundPage } from '~/pages';
 
 const routes = [
   { path: '/', name: 'home', component: HomePage },
+  {
+    path: '/forum/:forumId',
+    name: 'forum.show',
+    component: ForumPage,
+    props: true,
+    beforeEnter: [redirectOnForumNotFound],
+  },
   {
     path: '/thread/:threadId',
     name: 'thread.show',

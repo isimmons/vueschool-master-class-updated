@@ -9,7 +9,17 @@ export const redirectOnThreadNotFound: NavigationGuard = (to) => {
     return {
       name: 'NotFound',
       params: { pathMatch: to.path.substring(1).split('/') },
-      // preserve existing query params and hash too
+      query: to.query,
+      hash: to.hash,
+    };
+};
+
+export const redirectOnForumNotFound: NavigationGuard = (to) => {
+  const forumExists = sourceData.forums.find((f) => f.id === to.params.forumId);
+  if (!forumExists)
+    return {
+      name: 'NotFound',
+      params: { pathMatch: to.path.substring(1).split('/') },
       query: to.query,
       hash: to.hash,
     };
