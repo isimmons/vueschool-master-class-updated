@@ -24,3 +24,16 @@ export const redirectOnForumNotFound: NavigationGuard = (to) => {
       hash: to.hash,
     };
 };
+
+export const redirectOnCategoryNotFound: NavigationGuard = (to) => {
+  const categoryExists = sourceData.categories.find(
+    (c) => c.id === to.params.categoryId
+  );
+  if (!categoryExists)
+    return {
+      name: 'NotFound',
+      params: { pathMatch: to.path.substring(1).split('/') },
+      query: to.query,
+      hash: to.hash,
+    };
+};
